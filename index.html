@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Nerko+One&family=Tilt+Warp&display=swap" rel="stylesheet">
+  <title> digital clock design </title>  
+</head>
+<body>
+
+<header>
+  <h1> digital clock </h1>
+  <sub> html css & javascript </sub>
+</header>
+
+<section>
+
+  <div class="timediv">
+
+    <div id="hour-div">
+      <span id="hour"> </span>
+       <span class="colon"> &#58;</span> 
+    </div>
+
+    <div id="minute-div">
+      <span id="minute"></span>
+    </div>
+
+    <div id="second-div">
+      <span id="second"></span>
+    </div>
+
+    <div id="month-div">
+      <span id="month"></span>
+    </div>
+
+    <div id="weekname-div">
+      <span id="weekname"></span>
+      <span id="day"> </span>
+    </div>
+  </div>
+</section>
+
+
+<script>
+
+setInterval( newtime , 1000 );
+var month = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"
+  ];
+
+var week = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY" ];
+
+
+function newtime(){
+  let time = new Date();
+
+  //this is day
+  document.getElementById("day").innerHTML = time.getDate();
+
+  //this is weekdays
+  document.getElementById("weekname").innerHTML = week[time.getDate()]
+
+  // this is month 
+  document.getElementById("month").innerHTML = month[time.getMonth()];
+
+  // this is hour 
+  document.getElementById("hour").innerHTML = time.getHours() ;
+
+  // this is minute 
+  document.getElementById("minute").innerHTML = time.getMinutes() ;
+
+  // this is second 
+  document.getElementById("second").innerHTML = time.getSeconds() ;
+};
+
+</script>
+  
+</body>
+</html>

@@ -1,0 +1,96 @@
+body{
+  background-color: #2E2E44 ;
+}
+header{
+color:rgba(255, 255, 255, 0.954);
+display: grid ;
+grid-template-columns: 300px ;
+grid-template-rows:90px 30px ;
+text-align: center ;
+justify-content: center ;
+align-items: center ;
+text-transform:capitalize;
+word-spacing: 2px ;
+letter-spacing: 2px ;
+}
+sub {
+margin-top:-60px;
+text-align: right ;
+padding:5px;
+}
+section{
+display: flex ;
+justify-content: center ;
+align-items: center ;
+}
+.timediv{
+border-radius:10px;
+width:280px ;
+padding:10px;
+margin:20px;
+display: grid ;
+grid-template-columns:repeat( 4 , 50px ) ;
+grid-template-rows: repeat( 2 , 50px ) 30px ;
+box-shadow: 3px 3px 30px #5391f4 ;
+font-family: 'Inter', sans-serif;
+}
+
+.timediv div{
+display: flex ;
+justify-content: center ;
+align-items: center ;
+}
+#hour-div{
+font-size:70px;
+grid-column:1/3;
+grid-row:1/3;
+}
+#hour-div span {
+background:linear-gradient(-45deg,#33f0f6, #4490ee);
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
+}
+
+
+#minute-div{
+padding-left:10px;
+font-size:70px;
+grid-column:3/5;
+grid-row:1/3;
+}
+
+#minute-div span{
+background:linear-gradient(-45deg,#fd8e44, #fa6353);
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
+}
+
+#second-div{
+  grid-column:4/6;
+  grid-row:1/3;
+}
+#second-div span{
+background:linear-gradient(-45deg,#33f6f3, #44ee8e);
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
+font-weight:bolder;
+}
+
+#month-div {
+text-align: center ;
+grid-column:1/3 ;
+}
+#weekname-div {
+text-align: center ;
+grid-column:3/5 ;
+}
+#weekname-div * {
+  padding:5px;
+}
+
+#month-div ,#weekname-div ,#day-div  span{
+background:linear-gradient(150deg,#9e55f6, #f49d5a);
+-webkit-text-fill-color: transparent;
+-webkit-background-clip:text;
+font-weight:bold;
+}
