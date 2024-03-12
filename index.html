@@ -11,73 +11,46 @@
   <title> digital clock design </title>  
 </head>
 <body>
+  
+  <section>
 
-<header>
-  <h1> digital clock </h1>
-  <sub> html css & javascript </sub>
-</header>
-
-<section>
-
-  <div class="timediv">
-
-    <div id="hour-div">
-      <span id="hour"> </span>
-       <span class="colon"> &#58;</span> 
-    </div>
-
-    <div id="minute-div">
-      <span id="minute"></span>
-    </div>
-
-    <div id="second-div">
-      <span id="second"></span>
-    </div>
-
-    <div id="month-div">
-      <span id="month"></span>
-    </div>
-
-    <div id="weekname-div">
-      <span id="weekname"></span>
-      <span id="day"> </span>
-    </div>
-  </div>
-</section>
+    <header>
+      <h1> digital clock </h1>
+      <sub> html css & javascript </sub>
+    </header>
 
 
-<script>
+        <div class="timediv">
 
-setInterval( newtime , 1000 );
-var month = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"
-  ];
+            <div id="hour-div">
+              <span id="hour"></span>
+            </div>
 
-var week = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY" ];
+            <div class="colon"> &#58; </div> 
+
+            <div id="minute-div">
+              <span id="minute"></span>
+            </div>
+
+            <div id="second-div">
+              <span id="second"></span>
+            </div>
+
+            <div id="month-div">
+              <span id="month"></span>
+            </div>
+
+            <div id="weekname-div">
+              <span id="weekname"></span>
+              <span id="day"> </span>
+            </div>
+
+         </div>
+
+  </section>
 
 
-function newtime(){
-  let time = new Date();
-
-  //this is day
-  document.getElementById("day").innerHTML = time.getDate();
-
-  //this is weekdays
-  document.getElementById("weekname").innerHTML = week[time.getDate()]
-
-  // this is month 
-  document.getElementById("month").innerHTML = month[time.getMonth()];
-
-  // this is hour 
-  document.getElementById("hour").innerHTML = time.getHours() ;
-
-  // this is minute 
-  document.getElementById("minute").innerHTML = time.getMinutes() ;
-
-  // this is second 
-  document.getElementById("second").innerHTML = time.getSeconds() ;
-};
-
-</script>
+<script src="script.js"></script>
   
 </body>
 </html>

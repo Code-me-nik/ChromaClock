@@ -17,8 +17,11 @@ Include the provided CSS and JavaScript files in your project.
 Use the provided HTML structure to add the clock to your website.
 Customize the clock's appearance and behavior as needed.
 
-Installation:
+## Installation:
 
 Clone the repository to your local machine.
 Include the CSS and JavaScript files in your project.
 Use the provided HTML structure to add the clock to your website.
+ 
+
+## Preview
